@@ -1,0 +1,6 @@
+trace.c:18:6:MX_TRACE_Init	1
+trace.c:31:6:SDK_TRACE_Start	1
+trace.c:40:6:SDK_TRACE_Stop	1
+trace.c:54:6:SDK_TRACE_Timestamp	1
+trace.c:70:6:SDK_TRACE_Print	2
+trace.c:99:6:SDK_TRACE_Dump	2
