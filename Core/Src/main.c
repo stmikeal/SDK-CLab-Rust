@@ -58,6 +58,9 @@ void SystemClock_Config(void);
 
 /* USER CODE END 0 */
 
+
+
+extern void rust_main();
 /**
   * @brief  The application entry point.
   * @retval int
@@ -103,11 +106,7 @@ int main(void)
   /* Example of using LED tracing */
 
   for (int i = 0; i < 10; i++) {
-	  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
-  	  SDK_TRACE_Timestamp(LED1, HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_13));
-  	  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_15);
-  	  SDK_TRACE_Timestamp(LED3, HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_15));
-  	  HAL_Delay(250);
+	  rust_main();
   }
 
   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);
