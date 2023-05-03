@@ -125,7 +125,7 @@ int main(void)
   /* Example of writing dump */
 
   uint8_t data[4] = { 0xDE, 0xAD, 0xBE, 0xEF };
-  SDK_TRACE_Dump(&data, 4);
+  SDK_TRACE_Dump((uint32_t)&data, 4);
 
   /* Place your code before here */
   /* Do not remove this code below */
