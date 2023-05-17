@@ -64,7 +64,7 @@ main-build: SDK_cLAB.elf secondary-outputs
 
 # Tool invocations
 SDK_cLAB.elf SDK_cLAB.map: $(OBJS) $(USER_OBJS) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "SDK_cLAB.elf" @"objects.list" ../target/librust_main.a $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32F407VGTX_RAM.ld" --specs=nosys.specs -Wl,-Map="SDK_cLAB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "SDK_cLAB.elf" @"objects.list" ../target/thumbv7m-none-eabi/debug/librust_main.a $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32F407VGTX_RAM.ld" --specs=nosys.specs -Wl,-Map="SDK_cLAB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group ../target/thumbv7m-none-eabi/debug/librust_main.a -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
