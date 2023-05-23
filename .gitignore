@@ -1,7 +1,7 @@
-./SDK_cLAB.bin
-./SDK_cLAB.elf
-./**/*.o
-./**/*.cycle
-./**/*.d
-./**/*.su
-./**/*.a
+SDK_cLAB.bin
+SDK_cLAB.elf
+**/*.o
+**/*.cycle
+**/*.d
+**/*.su
+**/*.a
