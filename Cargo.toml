@@ -3,14 +3,8 @@ name = "rust-to-c"
 version = "0.1.0"
 categories = ["hardware-support"]
 authors = ["Mike", "Leo", "Roman", "Sveta"]
-build = "build.rs"
 
 [dependencies]
-
-[build-dependencies]
-cc = "1.0"
-
-
 
 [lib]
 name = "rust_main"
