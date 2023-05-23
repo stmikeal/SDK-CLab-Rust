@@ -5,3 +5,4 @@ SDK_cLAB.elf
 **/*.d
 **/*.su
 **/*.a
+.idea

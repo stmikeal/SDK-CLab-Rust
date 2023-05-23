@@ -26,6 +26,6 @@ pub extern fn rust_main() {
 }
 
 #[panic_handler]
-pub fn panic(info: &PanicInfo) -> ! {
+pub fn panic() -> ! {
 	loop {}
 }
